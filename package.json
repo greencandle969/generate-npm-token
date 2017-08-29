@@ -1,0 +1,70 @@
+{
+  "name": "generate-npm-token",
+  "description": "CLI tool to generate npm tokens without using npm login",
+  "version": "0.1.0",
+  "bin": "dist/generate-npm-token",
+  "scripts": {
+    "build": "rimraf dist && mkdirp dist && babel lib --out-dir dist",
+    "prepublishOnly": "npm run build",
+    "start": "babel-node lib/generate-npm-token",
+    "test": "eslint lib/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/singapore/generate-npm-token.git"
+  },
+  "keywords": [
+    "npm",
+    "npmjs",
+    "registry",
+    "auth",
+    "token"
+  ],
+  "author": "Rhys Arkins <rhys@arkins.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/singapore/generate-npm-token/issues"
+  },
+  "homepage": "https://github.com/singapore/generate-npm-token",
+  "engines": {
+    "node": ">=6.11.1",
+    "npm": ">=5"
+  },
+  "dependencies": {
+    "bluebird": "3.5.0",
+    "inquirer": "3.2.2",
+    "lodash": "4.17.4",
+    "npm": "5.3.0",
+    "npm-registry-client": "8.4.0",
+    "validator": "8.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-plugin-transform-async-to-generator": "6.24.1",
+    "babel-plugin-transform-object-rest-spread": "6.26.0",
+    "eslint": "4.5.0",
+    "eslint-config-airbnb-base": "11.3.2",
+    "eslint-config-prettier": "2.3.0",
+    "eslint-plugin-import": "2.7.0",
+    "eslint-plugin-prettier": "2.2.0",
+    "eslint-plugin-promise": "3.5.0",
+    "prettier": "1.5.3"
+  },
+  "babel": {
+    "plugins": [
+      "transform-async-to-generator",
+      "transform-object-rest-spread"
+    ]
+  },
+  "renovate": {
+    "extends": [
+      ":app"
+    ],
+    "labels": [
+      "ready"
+    ],
+    "assignees": [
+      "rarkins"
+    ]
+  }
+}
