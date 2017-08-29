@@ -5,6 +5,7 @@
   "bin": "dist/generate-npm-token",
   "scripts": {
     "build": "rimraf dist && mkdirp dist && babel lib --out-dir dist",
+    "np": "np",
     "prepublishOnly": "npm run build",
     "start": "babel-node lib/generate-npm-token",
     "test": "eslint lib/**/*.js"
@@ -34,6 +35,7 @@
     "bluebird": "3.5.0",
     "inquirer": "3.2.2",
     "lodash": "4.17.4",
+    "np": "2.16.0",
     "npm": "5.3.0",
     "npm-registry-client": "8.4.0",
     "validator": "8.1.0"
